@@ -20,7 +20,7 @@ const  MovieApi = axios.create({ baseURL: process.env.REACT_APP_MOVIE_API_URL, h
   
 export const getMostPopularMovies = () => {
     console.log("ENV ",  process.env);
-    MovieApi.get("/discover/movie?sort_by=popularity.desc&api_key=8f781d70654b5a6f2fa69770d1d115a3")
+    MovieApi.get("/discover/movie?sort_by=popularity.desc")
         .then( popularMovies => {
             console.log("Data:", popularMovies);
         })
