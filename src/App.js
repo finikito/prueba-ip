@@ -12,7 +12,6 @@ const MyList = lazy(()=> import ('./pages/MyList'));
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
       <MovieProvider>
       <Suspense fallback={ <Spinner animation="border" />}>
         <Router>          
@@ -22,8 +21,7 @@ function App() {
         </Router>
       </Suspense>
       </MovieProvider>
-        
-      </header>
+         
     </div>
   );
 }
